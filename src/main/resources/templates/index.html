@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <title>Job Portal</title>
+    <link rel="stylesheet" th:href="@{assets/bootstrap/css/bootstrap.min.css}">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{assets/fonts/fontawesome-all.min.css}">
+    <link rel="stylesheet" th:href="@{assets/css/Filter.css}">
+    <link rel="stylesheet" th:href="@{assets/css/Login-Form-Clean.css}">
+    <link rel="stylesheet" th:href="@{assets/css/Login-screen.css}">
+    <link rel="stylesheet" th:href="@{assets/css/Navigation-with-Button.css}">
+    <link rel="stylesheet" th:href="@{assets/css/Search-Input-Responsive-with-Icon.css}">
+    <link rel="stylesheet" th:href="@{assets/css/styles.css}">
+</head>
+
+<body style="font-family: Rubik, sans-serif;background: #d6e0f0;">
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background: #d6e0f0;">
+    <div class="container"><a class="navbar-brand d-flex" href="index.html"><i class="fab fa-confluence fs-2"></i><span
+            class="ms-2">JobLab.</span></a>
+        <button class="navbar-toggler" data-bs-target="#navcol-1" data-bs-toggle="collapse"><span
+                class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+            </ul>
+            <span class="navbar-text actions">
+                <a class="login" th:href="@{login}">Log In</a>
+                <a class="btn btn-light action-button" role="button" style="background: #ee9919;" th:href="@{signup}">Sign Up</a>
+            </span>
+        </div>
+    </div>
+</nav>
+<header class="d-flex align-items-center"
+        th:style="'background: url(&quot;../assets/img/planning.jpg&quot;) center / cover no-repeat, var(--bs-red);'">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 px-0">
+                <div class="card m-auto" style="max-width: 850px;background: rgba(255,255,255,0.37);">
+                    <div class="card-body">
+                        <form class="d-flex align-items-center">
+                            <input
+                                class="form-control form-control-lg flex-shrink-1 form-control-borderless me-3"
+                                name="searchbar" placeholder="Search by keywords" style="background: rgb(255,255,255);"
+                                type="search">
+                            <button class="btn btn-dark btn-search" style="background: #ee9919;" type="button">Search
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col d-flex col-lg-3 d-none d-lg-block py-3" style="background: #f2ede4; height: 40vh;">
+                <h5 class="d-flex justify-content-between align-items-lg-center">Filters<i class="fas fa-filter"></i>
+                </h5>
+                <div class="filter align-items-start">
+                    <form>
+                        <select aria-label=".form-select-lg example" class=" mb-3">
+                            <option disabled selected>Type</option>
+                            <option value="Any">Any</option>
+                            <option value="Pernament">Permanent</option>
+                            <option value="Contract">Contract</option>
+                        </select>
+
+                        <select aria-label=".form-select-lg example" class=" mb-3">
+                            <option disabled selected>Location</option>
+                            <option value="Pretoria">Pretoria</option>
+                            <option value="Johannesburg">Johannesburg</option>
+                            <option value="Cape Town">Cape Town</option>
+                        </select>
+                        <button class="btn btn-primary" type="submit">Apply</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-9">
+                <div class="card shadow mb-4" style="background: #efe7da;  border: none;">
+                    <div class="card-body d-flex flex-column">
+                        <div>
+                            <h4>Web Designer</h4>
+                            <h6 class="text-muted"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br></h6>
+                            <div class="d-flex justify-content-between align-items-md-center"><span class="text-muted">14 days left</span>
+                                <div>
+                                    <!-- Button trigger modal -->
+                                    <button class="btn btn-job" data-bs-target="#view-job" data-bs-toggle="modal"
+                                            type="button">
+                                        View Job
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div aria-hidden="true" aria-labelledby="job-label" class="modal fade" id="view-job"
+                                         tabindex="-1">
+                                        <div class="modal-dialog modal-xl">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="job-label">Web Designer</h5>
+                                                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"
+                                                            type="button"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div bs-cut="1" class="col">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title">Web Designer - Internship</h3>
+                                                                <h6 class="text-muted card-subtitle mb-3"
+                                                                    style="font-size: 20px;">12 Months Contract</h6>
+                                                                <h6 class="text-muted card-subtitle mb-2"
+                                                                    style="font-size: 18px;">Location: Pretoria,
+                                                                    Johannesburg</h6>
+                                                                <div class="mb-4" style="color: var(--bs-red);"><span
+                                                                        class="me-4">Posted no: 2021-11-02</span><span>Closing date: 2021-11-25 15:00:00</span>
+                                                                </div>
+                                                                <article class="ms-3 mb-4">
+                                                                    <h4>Purpose</h4>
+                                                                    <p style="color: rgba(33,37,41,0.75);">Lorem ipsum
+                                                                        dolor sit amet, consectetur adipiscing elit, sed
+                                                                        do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Convallis a cras semper auctor
+                                                                        neque. Purus semper eget duis at tellus at urna.
+                                                                        Nunc lobortis mattis aliquam faucibus. Massa
+                                                                        tincidunt nunc pulvinar sapien et ligula. Fames
+                                                                        ac turpis egestas sed tempus urna et. Et netus
+                                                                        et malesuada fames ac turpis egestas. Felis
+                                                                        bibendum ut tristique et egestas. Fermentum
+                                                                        iaculis eu non diam phasellus. Et ligula
+                                                                        ullamcorper malesuada proin libero nunc
+                                                                        consequat interdum. Erat velit scelerisque in
+                                                                        dictum.<br/></p>
+                                                                </article>
+                                                                <article class="ms-3 mb-4">
+                                                                    <h4>Description</h4>
+                                                                    <p style="color: rgba(33,37,41,0.75);">Metus dictum
+                                                                        at tempor commodo ullamcorper a lacus
+                                                                        vestibulum. Id venenatis a condimentum vitae
+                                                                        sapien pellentesque habitant. Odio eu feugiat
+                                                                        pretium nibh ipsum consequat nisl vel. Elit ut
+                                                                        aliquam purus sit amet luctus venenatis lectus.
+                                                                        At tempor commodo ullamcorper a lacus
+                                                                        vestibulum. Lectus arcu bibendum at varius vel.
+                                                                        Malesuada nunc vel risus commodo. A arcu cursus
+                                                                        vitae congue mauris. Viverra justo nec ultrices
+                                                                        dui sapien eget. Ultrices mi tempus imperdiet
+                                                                        nulla malesuada pellentesque elit. Tincidunt
+                                                                        ornare massa eget egestas purus viverra
+                                                                        accumsan. Ultrices tincidunt arcu non sodales
+                                                                        neque. Egestas erat imperdiet sed euismod. <br/>
+                                                                    </p>
+                                                                    <p style="color: rgba(33,37,41,0.75);">Commodo quis
+                                                                        imperdiet massa tincidunt nunc pulvinar sapien
+                                                                        et. Enim nulla aliquet porttitor lacus luctus.
+                                                                        Scelerisque varius morbi enim nunc faucibus a
+                                                                        pellentesque sit. Sed lectus vestibulum mattis
+                                                                        ullamcorper velit sed ullamcorper. Tempor orci
+                                                                        dapibus ultrices in. Sollicitudin ac orci
+                                                                        phasellus egestas tellus. Ultricies lacus sed
+                                                                        turpis tincidunt id. Varius quam quisque id diam
+                                                                        vel quam elementum. Sed ullamcorper morbi
+                                                                        tincidunt ornare massa eget egestas. Proin nibh
+                                                                        nisl condimentum id venenatis a condimentum
+                                                                        vitae sapien. Quis viverra nibh cras pulvinar
+                                                                        mattis nunc sed. A iaculis at erat pellentesque
+                                                                        adipiscing commodo elit at. Id faucibus nisl
+                                                                        tincidunt eget nullam non nisi. Turpis massa sed
+                                                                        elementum tempus egestas sed sed. Porttitor leo
+                                                                        a diam sollicitudin tempor id eu nisl. Aenean
+                                                                        sed adipiscing diam donec adipiscing. Sed risus
+                                                                        ultricies tristique nulla aliquet enim tortor at
+                                                                        auctor. Arcu odio ut sem nulla pharetra diam sit
+                                                                        amet. Pellentesque eu tincidunt tortor
+                                                                        aliquam.<br/></p>
+                                                                </article>
+                                                                <article class="ms-3 mb-4">
+                                                                    <h4>Minimum Qualifications</h4>
+                                                                    <p style="color: rgba(33,37,41,0.75);">Students
+                                                                        currently completing their final year of
+                                                                        university degrees in:</p>
+                                                                    <ul style="color: rgba(33,37,41,0.75);">
+                                                                        <li>Commerce (Accounting, Business Management,
+                                                                            Finance, Economics etc)
+                                                                        </li>
+                                                                        <li>Actuarial Science</li>
+                                                                        <li>Maths</li>
+                                                                        <li>Statistics</li>
+                                                                        <li>Computer Science</li>
+                                                                        <li>Information Technology/Systems</li>
+                                                                        <li>Engineering</li>
+                                                                    </ul>
+                                                                    <p style="color: rgba(33,37,41,0.75);">This is not
+                                                                        an exhaustive list of degrees.<br/></p>
+                                                                </article>
+                                                                <article class="ms-3 mb-4">
+                                                                    <h4>Requirements</h4>
+                                                                    <p style="color: rgba(33,37,41,0.75);">Applicants
+                                                                        must:</p>
+                                                                    <ul style="color: rgba(33,37,41,0.75);">
+                                                                        <li>Be in their final year BSc (Any Field) or
+                                                                            BEng (Any Field) Graduates or Postgraduates
+                                                                            who wish to pursue an application
+                                                                            development career.<br/></li>
+                                                                        <li>At least have a Level 5 or C or 60% for Pure
+                                                                            Mathematics and English in their final
+                                                                            matric results<br/></li>
+                                                                        <li>Have matriculated in the last 8 years.<br/>
+                                                                        </li>
+                                                                        <li>Be willing to relocate to study and stay in
+                                                                            the Gauteng Province at their own
+                                                                            expense.<br/></li>
+                                                                        <li>Be willing to undergo screening assessments
+                                                                            in Gauteng at their own expense.<br/></li>
+                                                                        <li>Have a SA Citizenship, must have no bad
+                                                                            credit rating and no criminal record.<br/>
+                                                                        </li>
+                                                                    </ul>
+                                                                </article>
+                                                                <article class="ms-3 mb-4">
+                                                                    <h4>Responsibilities</h4>
+                                                                    <p style="color: rgba(33,37,41,0.75);">Successful
+                                                                        candidates will:</p>
+                                                                    <ul style="color: rgba(33,37,41,0.75);">
+                                                                        <li>Deliver exceptional service that exceeds
+                                                                            customers’ expectations through proactive,
+                                                                            innovative and appropriate solutions<br/>
+                                                                        </li>
+                                                                        <li>Provision of an efficient execution of role
+                                                                            responsibilities through careful and timeous
+                                                                            planning, reporting and updating of all
+                                                                            related information in the relevant role of
+                                                                            learning<br/></li>
+                                                                        <li>Participate in the innovation process in the
+                                                                            business and contribute toward new
+                                                                            innovations against objectives<br/></li>
+                                                                        <li>Participation in knowledge sharing and
+                                                                            projects to maximise skills required for the
+                                                                            role and relevant career <br/></li>
+                                                                        <li>Participation in knowledge sharing and
+                                                                            projects to maximise skills required for the
+                                                                            role and relevant career exploration by
+                                                                            executing all activities required to be
+                                                                            efficient and successful<br/></li>
+                                                                        <li>Manage graduate development plan by
+                                                                            completion of training assignments<br/></li>
+                                                                        <li>Manage graduate development plan to increase
+                                                                            own competencies and skills by attendance of
+                                                                            training<br/></li>
+                                                                        <li>Manage own development to increase own
+                                                                            competencies<br/></li>
+                                                                        <li>Live the values of the business through
+                                                                            demonstrating and displaying of the values
+                                                                            required in the business<br/></li>
+                                                                    </ul>
+                                                                </article>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-secondary" data-bs-dismiss="modal"
+                                                            type="button">Close
+                                                    </button>
+                                                    <a class="btn btn-primary stretched-link"
+                                                       href="apply.html?web-designer=">Apply</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script th:src="@{assets/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{assets/js/main.js}"></script>
+</body>
+
+</html>
